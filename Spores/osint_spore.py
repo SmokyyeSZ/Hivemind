@@ -9,4 +9,8 @@ class OSINTSpore:
 
     def fetch_headers(self):
         resp = requests.get(self.target)
-        return resp.headers['server']
+        org = {
+            "categoria": "passwords",
+            "server": resp.headers['server']
+        }
+        return org
