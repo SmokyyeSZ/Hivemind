@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 270" width="100%" height="270" fill="none">
+  <defs>
+    <linearGradient id="hiveBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040208" />
+      <stop offset="50%" stop-color="#0f0620" />
+      <stop offset="100%" stop-color="#06020b" />
+    </linearGradient>
+
+    <linearGradient id="hyphaePurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#581c87" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="hyphaeCrimson" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.55" />
+    </linearGradient>
+
+    <linearGradient id="bottomLaser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87" stop-opacity="0" />
+      <stop offset="45%" stop-color="#a855f7" stop-opacity="0.95" />
+      <stop offset="80%" stop-color="#dc2626" stop-opacity="1" />
+      <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
+    </linearGradient>
+
+    <pattern id="bioGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#2e1065" stroke-width="0.6" stroke-opacity="0.38" />
+    </pattern>
+
+    <filter id="bioRedGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="bioPurpleGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Main Frame -->
+  <rect x="2" y="2" width="956" height="266" rx="16" fill="url(#hiveBg)" stroke="#3b0764" stroke-width="1.6" />
+  <rect x="2" y="2" width="956" height="266" rx="16" fill="url(#bioGrid)" />
+
+  <!-- Bioluminescent Ambient Clouds -->
+  <circle cx="122" cy="135" r="95" fill="#6b21a8" fill-opacity="0.14" />
+  <circle cx="122" cy="135" r="55" fill="#dc2626" fill-opacity="0.09" />
+  <circle cx="815" cy="135" r="105" fill="#581c87" fill-opacity="0.12" />
+
+  <!-- ================= LEFT: MOTHERMIND MYCELIAL NUCLEUS ================= -->
+  <g transform="translate(122, 135)">
+    <!-- Outer Rotating DNA / Spore Orbit -->
+    <g>
+      <circle cx="0" cy="0" r="88" stroke="#4c1d95" stroke-width="1.8" stroke-dasharray="6 5 2 5" />
+      <circle cx="0" cy="-88" r="3.5" fill="#a855f7" filter="url(#bioPurpleGlow)" />
+      <circle cx="0" cy="88" r="3.5" fill="#dc2626" filter="url(#bioRedGlow)" />
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="28s" repeatCount="indefinite" />
+    </g>
+
+    <!-- Counter-Rotating Inner Spore Ring -->
+    <g>
+      <circle cx="0" cy="0" r="72" stroke="#991b1b" stroke-width="1.4" stroke-dasharray="18 8" stroke-opacity="0.8" />
+      <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="19s" repeatCount="indefinite" />
+    </g>
+
+    <!-- Organic Mycelial Hyphae Branches -->
+    <path d="M 0 0 Q -26 -24 -52 -42 M -34 -28 Q -48 -18 -58 -22" stroke="url(#hyphaePurple)" stroke-width="2" stroke-linecap="round" />
+    <path d="M 0 0 Q 28 -22 50 -44 M 32 -26 Q 48 -32 58 -20" stroke="url(#hyphaeCrimson)" stroke-width="2" stroke-linecap="round" />
+    <path d="M 0 0 Q -28 24 -48 46 M -30 26 Q -50 30 -56 18" stroke="url(#hyphaeCrimson)" stroke-width="2" stroke-linecap="round" />
+    <path d="M 0 0 Q 26 26 50 44 M 32 28 Q 42 48 28 56" stroke="url(#hyphaePurple)" stroke-width="2" stroke-linecap="round" />
+    <path d="M 0 0 Q 0 -36 -8 -60 M 0 0 Q 8 36 4 60" stroke="#7e22ce" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Pulsing Spore Buds at Hyphae Tips -->
+    <circle cx="-52" cy="-42" r="4" fill="#c084fc" filter="url(#bioPurpleGlow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="50" cy="-44" r="4" fill="#ef4444" filter="url(#bioRedGlow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.1s" begin="0.7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-48" cy="46" r="4" fill="#ef4444" filter="url(#bioRedGlow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.1s" begin="1.3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="50" cy="44" r="4" fill="#c084fc" filter="url(#bioPurpleGlow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.1s" begin="0.4s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- MotherMind Core Pulse -->
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#dc2626" stroke-width="1.4">
+      <animate attributeName="r" values="22;38;22" dur="2.8s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.75;0.08;0.75" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="22" fill="#1b0833" stroke="#a855f7" stroke-width="2.2" filter="url(#bioPurpleGlow)" />
+    <circle cx="0" cy="0" r="11" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.6" />
+    <circle cx="0" cy="0" r="4.5" fill="#fca5a5">
+      <animate attributeName="r" values="3.5;5.5;3.5" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- ================= CENTER: HIVEMIND IDENTITY & TAGS ================= -->
+  <g transform="translate(234, 52)">
+    <!-- Bio-Telemetry Status Pill -->
+    <rect x="0" y="0" width="292" height="22" rx="11" fill="#120724" stroke="#9333ea" stroke-opacity="0.65" stroke-width="1" />
+    <circle cx="14" cy="11" r="3.5" fill="#dc2626">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <text x="26" y="14.5" fill="#e9d5ff" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="bold" letter-spacing="0.9">
+      OPHIOCORDYCEPS C2 · SWARM R&amp;D
+    </text>
+
+    <!-- Main Brand Title -->
+    <text x="0" y="68" fill="#f8fafc" font-family="Consolas, 'Courier New', monospace" font-size="44" font-weight="900" letter-spacing="2.5">
+      HIVE<tspan fill="#a855f7">MIND</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="95" fill="#cbd5e1" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500">
+      Emulação de Ameaças Orgânicas &amp; Colônia de Agentes Autônomos
+    </text>
+    <text x="0" y="114" fill="#94a3b8" font-family="Consolas, 'Courier New', monospace" font-size="11">
+      "Mudando a forma como entendemos ataques furtivos e defesas adaptativas."
+    </text>
+
+    <!-- Architectural Pills -->
+    <g transform="translate(0, 134)">
+      <rect x="0" y="0" width="144" height="25" rx="6" fill="#18072b" stroke="#a855f7" stroke-opacity="0.6" stroke-width="1" />
+      <text x="72" y="16" text-anchor="middle" fill="#e9d5ff" font-family="Consolas, monospace" font-size="10.5" font-weight="bold">
+        MotherMind + Spores
+      </text>
+
+      <rect x="154" y="0" width="144" height="25" rx="6" fill="#1f0814" stroke="#dc2626" stroke-opacity="0.65" stroke-width="1" />
+      <text x="226" y="16" text-anchor="middle" fill="#fca5a5" font-family="Consolas, monospace" font-size="10.5" font-weight="bold">
+        Bayesiano P &gt;= 0.85
+      </text>
+
+      <rect x="308" y="0" width="136" height="25" rx="6" fill="#110822" stroke="#6b21a8" stroke-opacity="0.6" stroke-width="1" />
+      <text x="376" y="16" text-anchor="middle" fill="#c084fc" font-family="Consolas, monospace" font-size="10.5" font-weight="bold">
+        Python · SQLite3
+      </text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT: LIVE COLONY SPORE TELEMETRY HUD ================= -->
+  <g transform="translate(696, 26)">
+    <rect x="0" y="0" width="238" height="218" rx="12" fill="#06030d" fill-opacity="0.92" stroke="#3b0764" stroke-width="1.3" />
+    <text x="14" y="21" fill="#c084fc" font-family="Consolas, 'Courier New', monospace" font-size="9.5" font-weight="bold">
+      COLONY MESH // SPORE DISPERSAL
+    </text>
+    <line x1="12" y1="29" x2="226" y2="29" stroke="#2e1065" stroke-width="1" />
+
+    <!-- Hyphae Links inside HUD -->
+    <path d="M 119 102 Q 70 68 46 62" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 3" />
+    <path d="M 119 102 Q 168 68 192 62" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3" />
+    <path d="M 119 102 Q 72 138 50 150" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3" />
+    <path d="M 119 102 Q 168 138 190 150" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 3" />
+
+    <!-- Outbound Spores & Inbound Recon Packets -->
+    <circle r="2.8" fill="#c084fc" filter="url(#bioPurpleGlow)">
+      <animateMotion dur="2.2s" repeatCount="indefinite" path="M 119 102 Q 70 68 46 62" />
+    </circle>
+    <circle r="2.8" fill="#ef4444" filter="url(#bioRedGlow)">
+      <animateMotion dur="1.9s" begin="0.5s" repeatCount="indefinite" path="M 192 62 Q 168 68 119 102" />
+    </circle>
+    <circle r="2.8" fill="#ef4444" filter="url(#bioRedGlow)">
+      <animateMotion dur="2.4s" begin="0.9s" repeatCount="indefinite" path="M 119 102 Q 72 138 50 150" />
+    </circle>
+    <circle r="2.8" fill="#c084fc" filter="url(#bioPurpleGlow)">
+      <animateMotion dur="2.1s" begin="1.3s" repeatCount="indefinite" path="M 190 150 Q 168 138 119 102" />
+    </circle>
+
+    <!-- Spore Nodes -->
+    <g transform="translate(46, 62)">
+      <circle r="9" fill="#2e1065" stroke="#a855f7" stroke-width="1.5" />
+      <circle r="3" fill="#e9d5ff" />
+      <text x="0" y="19" text-anchor="middle" fill="#e9d5ff" font-family="Consolas, monospace" font-size="7.5">OSINT</text>
+    </g>
+
+    <g transform="translate(192, 62)">
+      <circle r="9" fill="#450a0a" stroke="#ef4444" stroke-width="1.5" />
+      <circle r="3" fill="#fca5a5" />
+      <text x="0" y="19" text-anchor="middle" fill="#fca5a5" font-family="Consolas, monospace" font-size="7.5">RECON</text>
+    </g>
+
+    <g transform="translate(50, 150)">
+      <circle r="9" fill="#450a0a" stroke="#ef4444" stroke-width="1.5" />
+      <circle r="3" fill="#fca5a5" />
+      <text x="0" y="19" text-anchor="middle" fill="#fca5a5" font-family="Consolas, monospace" font-size="7.5">MIMIC</text>
+    </g>
+
+    <g transform="translate(190, 150)">
+      <circle r="9" fill="#2e1065" stroke="#a855f7" stroke-width="1.5" />
+      <circle r="3" fill="#e9d5ff" />
+      <text x="0" y="19" text-anchor="middle" fill="#e9d5ff" font-family="Consolas, monospace" font-size="7.5">ASSIMILATE</text>
+    </g>
+
+    <!-- Center Mother Node -->
+    <g transform="translate(119, 102)">
+      <circle r="19" fill="none" stroke="#dc2626" stroke-width="1.1">
+        <animate attributeName="r" values="14;23;14" dur="2.4s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.7;0.08;0.7" dur="2.4s" repeatCount="indefinite" />
+      </circle>
+      <circle r="14" fill="#240a40" stroke="#a855f7" stroke-width="2" />
+      <circle r="5" fill="#dc2626" />
+      <text x="0" y="25" text-anchor="middle" fill="#ffffff" font-family="Consolas, monospace" font-size="8" font-weight="bold">MOTHER</text>
+    </g>
+
+    <!-- Bottom Spore State Telemetry Bar -->
+    <rect x="12" y="184" width="214" height="22" rx="4" fill="#120622" stroke="#4c1d95" stroke-width="0.9" />
+    <text x="20" y="198" fill="#fca5a5" font-family="Consolas, monospace" font-size="8.5" font-weight="bold">
+      CONFIDENCE: 89%  |  KILL_SW: ARMED
+    </text>
+  </g>
+
+  <!-- Sweeping Bioluminescent Line -->
+  <line x1="18" y1="266" x2="942" y2="266" stroke="#1e0b36" stroke-width="2" />
+  <rect x="-260" y="264.8" width="260" height="2.6" rx="1.3" fill="url(#bottomLaser)">
+    <animate attributeName="x" from="-260" to="960" dur="4.5s" repeatCount="indefinite" />
+  </rect>
+</svg>
+
